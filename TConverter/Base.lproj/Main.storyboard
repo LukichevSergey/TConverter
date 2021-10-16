@@ -16,34 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="1xO-j6-C5N">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="1xO-j6-C5N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T - Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-uX-pEe">
-                                <rect key="frame" x="67" y="122" width="280" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T - Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-uX-pEe">
+                                <rect key="frame" x="67" y="89" width="280" height="45"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-c4-cnq">
-                                <rect key="frame" x="178" y="493" width="72" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-c4-cnq">
+                                <rect key="frame" x="171" y="493" width="72" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Rk-PPP">
-                                <rect key="frame" x="65" y="434" width="284" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Rk-PPP">
+                                <rect key="frame" x="65" y="433" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="RA8-yZ-hOz"/>
+                                </constraints>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hFN-gr-asq"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCv-YT-5h3">
-                                <rect key="frame" x="178" y="354" width="58" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCv-YT-5h3">
+                                <rect key="frame" x="178" y="361" width="58" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,6 +49,29 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1xO-j6-C5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0cY-C1-H9y"/>
+                            <constraint firstItem="zmT-c4-cnq" firstAttribute="top" secondItem="daU-Rk-PPP" secondAttribute="bottom" constant="30" id="7i0-Ua-MXD"/>
+                            <constraint firstItem="yCv-YT-5h3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bqm-6e-vzr"/>
+                            <constraint firstItem="daU-Rk-PPP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mbb-4L-02a"/>
+                            <constraint firstItem="daU-Rk-PPP" firstAttribute="top" secondItem="yCv-YT-5h3" secondAttribute="bottom" constant="30" id="Xsp-WM-kUK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1xO-j6-C5N" secondAttribute="trailing" id="eGw-tP-fJv"/>
+                            <constraint firstItem="daU-Rk-PPP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lNK-2q-zDX"/>
+                            <constraint firstItem="ETN-uX-pEe" firstAttribute="centerX" secondItem="1xO-j6-C5N" secondAttribute="centerX" id="mB7-gB-dqt"/>
+                            <constraint firstItem="zmT-c4-cnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nts-j7-whU"/>
+                            <constraint firstItem="ETN-uX-pEe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="o58-UJ-Rcp"/>
+                            <constraint firstItem="1xO-j6-C5N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="to0-k1-oCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="1xO-j6-C5N" secondAttribute="top" constant="44" id="wc7-o2-YWU"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1xO-j6-C5N"/>
+                                <include reference="ETN-uX-pEe"/>
+                                <include reference="zmT-c4-cnq"/>
+                                <include reference="daU-Rk-PPP"/>
+                                <include reference="yCv-YT-5h3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="yCv-YT-5h3" id="0hD-1h-s4z"/>
